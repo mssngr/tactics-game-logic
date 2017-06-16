@@ -9,10 +9,8 @@ const T = CONSTANTS.COMBAT_ACTIONS[2]
 const B = CONSTANTS.COMBAT_ACTIONS[3]
 const R = CONSTANTS.COMBAT_ACTIONS[4]
 
-let player = unwen
-let enemy = ulfric
-let action
-enemy.action = A
+const player = unwen
+const enemy = ulfric
 
 console.log(`
 You are ${player.name}.

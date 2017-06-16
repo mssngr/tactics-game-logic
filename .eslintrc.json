@@ -3,11 +3,29 @@
     "es6": true,
     "node": true
   },
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "cleanjs"
+  ],
   "parserOptions": {
     "sourceType": "module"
   },
+  "plugins": [
+    "immutable",
+    "eslint-comments"
+  ],
   "rules": {
+    "eslint-comments/disable-enable-pair": "error",
+    "eslint-comments/no-duplicate-disable": "error",
+    "eslint-comments/no-unlimited-disable": "error",
+    "eslint-comments/no-unused-disable": "error",
+    "eslint-comments/no-unused-enable": "error",
+    "eslint-comments/no-use": "error",
+    "immutable/no-let": "error",
+    "immutable/no-this": "error",
+    "immutable/no-mutation": "error",
+    "fp/no-unused-expression": "off",
+    "fp/no-nil": "off",
     "indent": [
       "error",
       2,

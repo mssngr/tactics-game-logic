@@ -10,6 +10,12 @@
   "author": "Gabriel Konkle",
   "license": "ISC",
   "dependencies": {
+    "eslint-config-cleanjs": "^4.0.0",
+    "eslint-plugin-better": "^0.1.5",
+    "eslint-plugin-eslint-comments": "^1.0.1",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-immutable": "^1.0.0",
+    "eslint-plugin-import": "^2.3.0",
     "readline-sync": "^1.4.7"
   },
   "devDependencies": {
