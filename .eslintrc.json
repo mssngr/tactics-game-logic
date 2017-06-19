@@ -7,6 +7,7 @@
     "eslint:recommended",
     "cleanjs"
   ],
+  "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"
   },
@@ -15,17 +16,18 @@
     "eslint-comments"
   ],
   "rules": {
+    "fp/no-unused-expression": "off",
+    "better/no-ifs": "off",
     "eslint-comments/disable-enable-pair": "error",
     "eslint-comments/no-duplicate-disable": "error",
     "eslint-comments/no-unlimited-disable": "error",
     "eslint-comments/no-unused-disable": "error",
     "eslint-comments/no-unused-enable": "error",
-    "eslint-comments/no-use": "error",
+    "eslint-comments/no-use": "off",
     "immutable/no-let": "error",
     "immutable/no-this": "error",
     "immutable/no-mutation": "error",
-    "fp/no-unused-expression": "off",
-    "fp/no-nil": "off",
+    "strict": 0,
     "indent": [
       "error",
       2,

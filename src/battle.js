@@ -3,11 +3,11 @@ import {unwen, ulfric} from '../lib/characters'
 import {calcPlayer, calcEnemy} from '../lib/tools2'
 import * as CONSTANTS from '../lib/constants'
 
-const A = CONSTANTS.COMBAT_ACTIONS[0]
-const C = CONSTANTS.COMBAT_ACTIONS[1]
-const T = CONSTANTS.COMBAT_ACTIONS[2]
-const B = CONSTANTS.COMBAT_ACTIONS[3]
-const R = CONSTANTS.COMBAT_ACTIONS[4]
+const A = CONSTANTS.COMBAT_ACTIONS.A
+const C = CONSTANTS.COMBAT_ACTIONS.C
+const T = CONSTANTS.COMBAT_ACTIONS.T
+const B = CONSTANTS.COMBAT_ACTIONS.B
+const R = CONSTANTS.COMBAT_ACTIONS.R
 
 const player = unwen
 const enemy = ulfric
