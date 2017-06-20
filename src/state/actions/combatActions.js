@@ -1,4 +1,5 @@
-import {PLAYER_CHOICE, ENEMY_CHOICE, COMBAT_ROUND} from '../actions/combatTypes'
+import {calcDamage} from 'lib/combat'
+import {PLAYER_CHOICE, ENEMY_CHOICE, CALC_COMBAT} from '../actions/combatTypes'
 
 export function playerChoice(actionChoice) {
   return {
@@ -14,8 +15,10 @@ export function enemyChoice(actionChoice) {
   }
 }
 
-export function calcCombat() {
+export function calcCombat(player, enemy) {
+  const damage = calcDamage(player, enemy)
   return {
-    type: COMBAT_ROUND,
+    type: CALC_COMBAT,
+    damage: damage,
   }
 }

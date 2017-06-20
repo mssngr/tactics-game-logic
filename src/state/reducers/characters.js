@@ -1,6 +1,6 @@
 import * as COMBAT_TYPES from '../actions/combatTypes'
 import {STATUSES} from '../../../lib/constants'
-import {WEAPONS} from '../../../lib/weapons'
+import {SWORDS} from '../../../lib/weapons'
 import {ARMOR} from '../../../lib/armor'
 
 const initialState = {
@@ -8,16 +8,16 @@ const initialState = {
     name: 'Oláf',
     health: 10,
     status: STATUSES.WELL,
-    weapon: WEAPONS.SWORD_IRON,
-    armor: ARMOR.ARMOR_LEATHER,
+    weapon: SWORDS.IRON,
+    armor: ARMOR.LEATHER,
     action: '',
   },
   enemy: {
     name: 'Efrás',
     health: 10,
     status: STATUSES.WELL,
-    weapon: WEAPONS.SWORD_EPIC,
-    armor: ARMOR.ARMOR_IRON,
+    weapon: SWORDS.EPIC,
+    armor: ARMOR.IRON,
     action: '',
   },
 }
@@ -43,7 +43,7 @@ export function characters(state = initialState, action) { // eslint-disable-lin
         },
       }
 
-    case COMBAT_TYPES.COMBAT_ROUND:
+    case COMBAT_TYPES.CALC_COMBAT:
       return {
         ...state,
         player: {

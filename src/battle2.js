@@ -10,9 +10,13 @@ console.log(store.getState())
 // Every time the state changes, log it
 // Note that subscribe() returns a function for unregistering the listener
 const unsubscribe = store.subscribe(() => {
-  if (store.getState().characters.player.action && store.getState().characters.enemy.action) {
-    return store.dispatch(calcCombat())
+  const player = store.getState().characters.player
+  const enemy = store.getState().characters.enemy
+
+  if (player.action && enemy.action) {
+    return store.dispatch(calcCombat(player, enemy))
   }
+
   return console.log(store.getState())
 })
 
