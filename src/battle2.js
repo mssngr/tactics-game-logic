@@ -1,8 +1,12 @@
+import readlineSync from 'readline-sync'
 import {store} from 'state/store'
 import {playerChoice, enemyChoice, calcCombat} from 'state/actions/combatActions'
-import {COMBAT_CHOICES} from 'lib/combat'
+import {COMBAT_CHOICES, COMBAT_ACTIONS} from 'lib/combat'
 
 const {A, C, T, B, R} = COMBAT_CHOICES
+function playerAction() {
+  return readlineSync.keyInSelect(COMBAT_ACTIONS, 'What do you choose to do?')
+}
 
 // Log the initial state
 console.log(store.getState())
@@ -22,7 +26,7 @@ const unsubscribe = store.subscribe(() => {
 
 // Dispatch some actions
 store.dispatch(enemyChoice(A))
-store.dispatch(playerChoice(A))
+store.dispatch(playerChoice(COMBAT_ACTIONS[playerAction()]))
 
 // Stop listening to state updates
 unsubscribe()
