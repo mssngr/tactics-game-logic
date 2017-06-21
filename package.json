@@ -19,7 +19,9 @@
     "keymirror": "^0.1.1",
     "module-alias": "^2.0.0",
     "readline-sync": "^1.4.7",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6",
+    "redux-logic": "^0.12.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
