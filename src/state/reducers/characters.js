@@ -17,7 +17,7 @@ const initialState = {
     health: 10,
     status: STATUSES.WELL,
     weapon: SWORDS.EPIC,
-    armor: ARMOR.IRON,
+    armor: ARMOR.EPIC,
     action: '',
   },
 }

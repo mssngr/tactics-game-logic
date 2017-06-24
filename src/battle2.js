@@ -13,6 +13,7 @@ console.log(store.getState())
 
 // Every time the state changes, log it
 // Note that subscribe() returns a function for unregistering the listener
+/* eslint-disable fp/no-nil, consistent-return */
 const unsubscribe = store.subscribe(() => {
   const player = store.getState().characters.player
   const enemy = store.getState().characters.enemy
@@ -20,9 +21,8 @@ const unsubscribe = store.subscribe(() => {
   if (player.action && enemy.action) {
     return store.dispatch(calcCombat(player, enemy))
   }
-
-  return console.log(store.getState())
 })
+/* eslint-enable fp/no-nil, consistent-return */
 
 // Dispatch some actions
 store.dispatch(enemyChoice(A))

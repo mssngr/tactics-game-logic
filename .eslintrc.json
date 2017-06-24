@@ -16,6 +16,7 @@
     "eslint-comments"
   ],
   "rules": {
+    "block-style": "off",
     "fp/no-unused-expression": "off",
     "better/no-ifs": "off",
     "eslint-comments/disable-enable-pair": "error",
