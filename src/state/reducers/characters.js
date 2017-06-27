@@ -1,23 +1,23 @@
 import * as COMBAT_TYPES from '../actions/combatTypes'
 import {STATUSES} from '../../../lib/constants'
-import {SWORDS} from '../../../lib/weapons'
-import {ARMOR} from '../../../lib/armor'
+import * as WEAPONS from '../../../lib/weapons'
+import * as ARMOR from '../../../lib/armor'
 
 const initialState = {
   player: {
     name: 'Oláf',
     health: 10,
     status: STATUSES.WELL,
-    weapon: SWORDS.IRON,
-    armor: ARMOR.LEATHER,
+    weapon: WEAPONS.SWORD,
+    armor: ARMOR.SPLINT,
     action: '',
   },
   enemy: {
     name: 'Efrás',
     health: 10,
     status: STATUSES.WELL,
-    weapon: SWORDS.EPIC,
-    armor: ARMOR.EPIC,
+    weapon: WEAPONS.AXE,
+    armor: ARMOR.MAIL,
     action: '',
   },
 }
