@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "keymirror": "^0.1.1",
+    "lodash.random": "^3.2.0",
     "module-alias": "^2.0.0",
     "readline-sync": "^1.4.7",
     "redux": "^3.6.0",

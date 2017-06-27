@@ -8,7 +8,7 @@ export const calcCombatMiddleware = store => next => action => {
     console.log(`${player.name} ${player.action}s!`)
     console.log(`${enemy.name} ${enemy.action}s!`)
     console.log(`${player.name} takes ${calcDamage(player, enemy).player} damage.`)
-    console.log(`${enemy.name} takes ${calcDamage(player, enemy).enemy} damage.`)
+    console.log(`${enemy.name} takes ${calcDamage(player, enemy).enemy} damage.\n`)
   }
   return next(action)
 }
