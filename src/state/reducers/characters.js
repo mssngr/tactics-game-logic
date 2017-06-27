@@ -48,11 +48,12 @@ export function characters(state = initialState, action) { // eslint-disable-lin
         ...state,
         player: {
           ...state.player,
-          health: state.player.health - 1,
+          health: state.player.health - action.damage.player,
           action: '',
         },
         enemy: {
           ...state.enemy,
+          health: state.enemy.health - action.damage.enemy,
           action: '',
         },
       }
