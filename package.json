@@ -4,17 +4,37 @@
   "description": "Some Tactical RPG logic.",
   "main": "src/main.js",
   "scripts": {
-    "dev": "babel-node src/main.js --presets env",
+    "dev": "babel-node src/main.js --presets env --plugins transform-object-rest-spread",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gabriel Konkle",
   "license": "ISC",
+  "_moduleAliases": {
+    "@root": ".",
+    "lib": "./lib",
+    "src": "./src",
+    "state": "./src/state"
+  },
   "dependencies": {
-    "readline-sync": "^1.4.7"
+    "keymirror": "^0.1.1",
+    "lodash.random": "^3.2.0",
+    "module-alias": "^2.0.0",
+    "readline-sync": "^1.4.7",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6",
+    "redux-logic": "^0.12.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.5.2",
-    "eslint": "^3.19.0"
+    "eslint": "^3.19.0",
+    "eslint-config-cleanjs": "^4.0.0",
+    "eslint-plugin-better": "^0.1.5",
+    "eslint-plugin-eslint-comments": "^1.0.1",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-immutable": "^1.0.0",
+    "eslint-plugin-import": "^2.3.0"
   }
 }

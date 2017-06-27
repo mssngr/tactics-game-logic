@@ -1,0 +1,5 @@
+export const START_COMBAT = 'START_COMBAT'
+export const END_COMBAT = 'END_COMBAT'
+export const PLAYER_CHOICE = 'PLAYER_CHOICE'
+export const ENEMY_CHOICE = 'ENEMY_CHOICE'
+export const CALC_COMBAT = 'CALC_COMBAT'
