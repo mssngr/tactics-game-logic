@@ -3,7 +3,7 @@ import random from 'lodash.random'
 import {PLAYER_CHOICE, ENEMY_CHOICE, CALC_COMBAT} from '../actions/combatTypes'
 import {COMBAT_CHOICES, ATTACK_TYPES, calcDamage} from 'lib/combat'
 
-export const calcCombatMiddleware = store => next => action => {
+export const calcCombatMiddleware = store => next => action => { // eslint-disable-line fp/no-nil
   const player = store.getState().characters.player
   const enemy = store.getState().characters.enemy
   switch (action.type) {
@@ -37,5 +37,4 @@ export const calcCombatMiddleware = store => next => action => {
       return next(action)
 
   }
-  return next(action)
 }
