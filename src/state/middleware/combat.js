@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync'
 import random from 'lodash.random'
+import * as WEAPONS from 'lib/weapons'
 import {PLAYER_CHOICE, ENEMY_CHOICE, CALC_COMBAT} from '../actions/combatTypes'
-import {COMBAT_CHOICES, ATTACK_TYPES, calcDamage} from 'lib/combat'
+import {COMBAT_CHOICES, SWORD_ATTACKS, calcDamage} from 'lib/combat'
 
 export const calcCombatMiddleware = store => next => action => { // eslint-disable-line fp/no-nil
   const player = store.getState().characters.player
@@ -9,19 +10,19 @@ export const calcCombatMiddleware = store => next => action => { // eslint-disab
   switch (action.type) {
 
     case PLAYER_CHOICE:
-      if (action.choice === COMBAT_CHOICES.A) {
+      if (action.choice === COMBAT_CHOICES.A && player.weapon === WEAPONS.SWORD) {
         return next({
           ...action,
-          attackType: readlineSync.keyInSelect(ATTACK_TYPES, 'How do you want to attack?'),
+          attackType: readlineSync.keyInSelect(SWORD_ATTACKS, 'How do you want to attack?'),
         })
       }
       return next(action)
 
     case ENEMY_CHOICE:
-      if (action.choice === COMBAT_CHOICES.A) {
+      if (action.choice === COMBAT_CHOICES.A && enemy.weapon === WEAPONS.SWORD) {
         return next({
           ...action,
-          attackType: ATTACK_TYPES[random(0, 2)],
+          attackType: SWORD_ATTACKS[random(0, 1)],
         })
       }
       return next(action)

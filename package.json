@@ -16,6 +16,7 @@
     "state": "./src/state"
   },
   "dependencies": {
+    "chance": "^1.0.10",
     "keymirror": "^0.1.1",
     "lodash.random": "^3.2.0",
     "module-alias": "^2.0.0",

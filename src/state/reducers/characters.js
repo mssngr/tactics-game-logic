@@ -1,20 +1,20 @@
 import * as COMBAT_TYPES from '../actions/combatTypes'
-import {STATUSES} from '../../../lib/constants'
-import * as WEAPONS from '../../../lib/weapons'
-import * as ARMOR from '../../../lib/armor'
+import {STATUSES} from 'lib/constants'
+import * as WEAPONS from 'lib/weapons'
+import * as ARMOR from 'lib/armor'
 
 const initialState = {
   player: {
-    name: 'Oláf',
-    health: 10,
+    name: 'Efrás',
+    effectiveness: 5,
     status: STATUSES.WELL,
-    weapon: WEAPONS.SWORD,
+    weapon: WEAPONS.SPATHA,
     armor: ARMOR.SPLINT,
     action: '',
   },
   enemy: {
-    name: 'Efrás',
-    health: 10,
+    name: 'Maximus',
+    effectiveness: 7,
     status: STATUSES.WELL,
     weapon: WEAPONS.AXE,
     armor: ARMOR.MAIL,
@@ -48,12 +48,12 @@ export function characters(state = initialState, action) { // eslint-disable-lin
         ...state,
         player: {
           ...state.player,
-          health: state.player.health - action.damage.player,
+          effectiveness: state.player.effectiveness - action.damage.player,
           action: '',
         },
         enemy: {
           ...state.enemy,
-          health: state.enemy.health - action.damage.enemy,
+          effectiveness: state.enemy.effectiveness - action.damage.enemy,
           action: '',
         },
       }
