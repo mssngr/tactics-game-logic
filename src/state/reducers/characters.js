@@ -6,17 +6,29 @@ import * as ARMOR from 'lib/armor'
 const initialState = {
   player: {
     name: 'Efrás',
-    effectiveness: 5,
+    stamina: 10,
     status: STATUSES.WELL,
-    weapon: WEAPONS.SPATHA,
+    weapon: WEAPONS.GER,
+    proficiency: {
+      'Sword': 3,
+      'Axe': 1,
+      'Spear': 2,
+      'Blunt': 1,
+    },
     armor: ARMOR.SPLINT,
     action: '',
   },
   enemy: {
     name: 'Maximus',
-    effectiveness: 7,
+    stamina: 12,
     status: STATUSES.WELL,
     weapon: WEAPONS.AXE,
+    proficiency: {
+      'Sword': 1,
+      'Axe': 2,
+      'Spear': 1,
+      'Blunt': 2,
+    },
     armor: ARMOR.MAIL,
     action: '',
   },
@@ -48,12 +60,12 @@ export function characters(state = initialState, action) { // eslint-disable-lin
         ...state,
         player: {
           ...state.player,
-          effectiveness: state.player.effectiveness - action.damage.player,
+          stamina: state.player.stamina - action.damage.player,
           action: '',
         },
         enemy: {
           ...state.enemy,
-          effectiveness: state.enemy.effectiveness - action.damage.enemy,
+          stamina: state.enemy.stamina - action.damage.enemy,
           action: '',
         },
       }
