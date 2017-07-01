@@ -33,10 +33,3 @@ export function calcCombat(player, enemy) {
     damage: calcDamage(player, enemy),
   }
 }
-
-export function combatMessage(message) {
-  return {
-    type: TYPES.COMBAT_MESSAGE,
-    message: message,
-  }
-}

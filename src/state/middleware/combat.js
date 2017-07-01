@@ -8,8 +8,8 @@ export const calcCombatMiddleware = store => next => action => { // eslint-disab
     case CALC_COMBAT:
       console.log(`${player.name} ${player.action}s!`)
       console.log(`${enemy.name} ${enemy.action}s!`)
-      console.log(`${player.name} takes unknown? damage.`)
-      console.log(`${enemy.name} takes unknown? damage.\n`)
+      console.log(`${player.name} takes ${action.damage.player} damage.`)
+      console.log(`${enemy.name} takes ${action.damage.enemy} damage.\n`)
       return next(action)
 
     default:
