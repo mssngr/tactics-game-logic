@@ -164,7 +164,8 @@
       "error"
     ],
     "no-use-before-define": [
-      "error"
+      "error",
+      "nofunc"
     ],
     "array-bracket-spacing": [
       "error",

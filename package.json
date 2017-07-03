@@ -11,6 +11,7 @@
   "license": "ISC",
   "_moduleAliases": {
     "@root": ".",
+    "constants": "./constants",
     "lib": "./lib",
     "src": "./src",
     "state": "./src/state"

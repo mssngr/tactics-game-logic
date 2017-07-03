@@ -1,4 +1,4 @@
-import {calcDamage} from 'lib/combat'
+import {calcActions} from 'lib/combat/combat'
 import * as TYPES from '../actions/combatTypes'
 
 export function startCombat() {
@@ -28,8 +28,10 @@ export function enemyChoice(actionChoice) {
 }
 
 export function calcCombat(player, enemy) {
+  console.log(`${player.name} ${player.action}s!`)
+  console.log(`${enemy.name} ${enemy.action}s!`)
   return {
     type: TYPES.CALC_COMBAT,
-    damage: calcDamage(player, enemy),
+    result: calcActions(player, enemy),
   }
 }

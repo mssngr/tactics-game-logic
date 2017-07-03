@@ -6,10 +6,24 @@ export const calcCombatMiddleware = store => next => action => { // eslint-disab
   switch (action.type) {
 
     case CALC_COMBAT:
-      console.log(`${player.name} ${player.action}s!`)
-      console.log(`${enemy.name} ${enemy.action}s!`)
-      console.log(`${player.name} takes ${action.damage.player} damage.`)
-      console.log(`${enemy.name} takes ${action.damage.enemy} damage.\n`)
+      if (action.player.damage) {
+        console.log(`${player.name} takes ${action.player.damage} damage.`)
+      }
+      if (action.player.condition) {
+        console.log(`${player.name} is now ${action.player.condition}.`)
+      }
+      if (action.player.status) {
+        console.log(`${player.name} is ${action.player.status}.`)
+      }
+      if (action.enemy.damage) {
+        console.log(`${enemy.name} takes ${action.enemy.damage} damage.`)
+      }
+      if (action.enemy.condition) {
+        console.log(`${enemy.name} is now ${action.enemy.condition}.`)
+      }
+      if (action.enemy.status) {
+        console.log(`${enemy.name} is ${action.enemy.status}.`)
+      }
       return next(action)
 
     default:

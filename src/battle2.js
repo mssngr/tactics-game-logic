@@ -1,5 +1,5 @@
 import {store} from 'state/store'
-import {combat} from 'lib/combat'
+import {combat} from 'lib/combat/combat'
 import * as combatActions from 'state/actions/combatActions'
 
 // Note that subscribe() returns a function for unregistering the listener
